@@ -11,25 +11,28 @@
 
 class Railway
 {
-    private $identifiantTrain;
+    public static $trains = [];
+    public $identifiantTrain;
     public $destination;
     public $heureDépart;
+    public $plateforme;
 
-    function __construct($idTrain, $destination, $heureD){
+    function __construct($idTrain, $destination, $heureD, $quai){
 
         $this->identifiantTrain = $idTrain;
         $this->destination = $destination;
         $this->heureDépart = $heureD;
+        $this->plateforme = $quai;
     }
 
     public static function ajouterTrain(&$trains, $newTrain){
         $trains[] = $newTrain;
     }
 
-    public static function afficherTrain($trains){
+    private static function afficherTrain($trains){
         foreach ($trains as $train){
             echo "=======================================\n";
-            echo " => Train ID: {$train->identifiantTrain}\n => Destination: {$train->destination}\n => Heure de départ: {$train->heureDépart}\n";
+            echo " => Train ID: {$train->identifiantTrain}\n => Destination: {$train->destination}\n => Heure de départ: {$train->heureDépart}\n => Quai : $train->plateforme";
             echo "=======================================\n";
             echo "";
         }

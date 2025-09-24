@@ -12,7 +12,9 @@
 require_once __DIR__ . "/railway.php";
 
 class Passager{
-    private $name;
+
+    public $passagers = [];
+    public $name;
     private $numTicket;
     private  $idTrainTicket;
 
