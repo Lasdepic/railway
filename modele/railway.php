@@ -29,12 +29,12 @@ class Railway
         $trains[] = $newTrain;
     }
 
-    private static function afficherTrain($trains){
+    public static function afficherTrain($trains){
         foreach ($trains as $train){
             echo "=======================================\n";
-            echo " => Train ID: {$train->identifiantTrain}\n => Destination: {$train->destination}\n => Heure de départ: {$train->heureDépart}\n => Quai : $train->plateforme";
+            echo " => Train ID: {$train->identifiantTrain}\n => Destination: {$train->destination}\n => Heure de départ: {$train->heureDépart}\n => Quai : $train->plateforme\n";
             echo "=======================================\n";
-            echo "";
+            echo "                                       \n";
         }
     }
 }

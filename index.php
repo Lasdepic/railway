@@ -21,9 +21,7 @@ Passager::ajouterUnPassager($passagers, new Passager("Elodie", "B789", "TGV123")
 Passager::ajouterUnPassager($passagers, new Passager("Wahid", "B904", "TGV123"));
 Passager::ajouterUnPassager($passagers, new Passager("Pierre", "B876", "TGV378"));
 
-
+Railway::afficherTrain(Railway::$trains);
 Passager::afficherPassagerTrain($passagers);
-
-
 Gare::information($passagers);
 ?>

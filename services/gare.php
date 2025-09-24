@@ -14,7 +14,9 @@ class Gare
     {
         foreach (Railway::$trains as $train) {
             foreach ($passagers as $passager) {
-                echo " Train : $train->identifiantTrain | Destination : $train->destination | Départ : $train->heureDépart | Quai : $train->plateforme === -Passager : $passager->name\n";
+                if ($passager->getIdTrainTicket() == $train->identifiantTrain) {
+                    echo "Train : $train->identifiantTrain | Destination : $train->destination | Départ : $train->heureDépart | Quai : $train->plateforme | - Passager : $passager->name\n";
+                }
             }
         }
     }

@@ -12,7 +12,6 @@
 require_once __DIR__ . "/railway.php";
 
 class Passager{
-
     public $passagers = [];
     public $name;
     private $numTicket;
@@ -23,6 +22,10 @@ class Passager{
         $this->name = $name;
         $this->numTicket = $numTicket;
         $this->idTrainTicket = $idTrainTicket;
+    }
+
+    public function getIdTrainTicket() {
+        return $this->idTrainTicket;
     }
 
     public static function ajouterUnPassager(&$passagers, $passager){
@@ -36,7 +39,7 @@ class Passager{
             echo "Numéro de billet: {$passager->numTicket}\n";
             echo "Train assigné: {$passager->idTrainTicket}\n";
             echo "===============================\n";
-            echo "";
+            echo "                                \n";
         }
     }
 }
